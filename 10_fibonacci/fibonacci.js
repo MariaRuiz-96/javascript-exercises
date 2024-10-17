@@ -1,15 +1,16 @@
 const fibonacci = function(n) {
-    if(n < 0){
-        return "OPPS"
-    } else if(n == 0 || n == 1){
-        return 1
-        } else{
-            for(let i = 0; i < n; i++){
-                n= (n-1) + (n-2)
-            }
-
-            return n
+    let num =Number(n)
+    if( num < 0){
+        return "OOPS"
+    } else {
+        let fib = [0,1]
+        for(let i = 2; i <= num; i++){
+            fib[i]= fib[i-1] + fib[i-2]
         }
+        return fib[n]
+    }
+
+
 };
 
 // Do not edit below this line
